@@ -1,0 +1,154 @@
+<html>
+	<head>
+        <link href="style.css" rel="stylesheet">
+        <title> Benchmark VulGr Dataset </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	</head>
+
+	<body  style="background-color:#DBF9FC"; oncontextmenu="return false";>
+		<header id="header">
+			<!-- resume header with your name and title -->
+			<h1><b> VulGr: Benchmark Graph Dataset for Source and
+                Binary Vulnerability Detection Systems </b></h1>
+            <!--<p class="p-welcome"> Welcome to my personal website. Feel free to contact me about my works</p> -->
+			<hr>
+
+			<p style="text-align:justify"> <b> <u>VulGr</u> is a new graph vulnerability detection dataset based on a novel graph structure that combines source- and binary-level code features into a composite graph to expose vulnerabilities in real-world applications. Recent works have applied GNNs to reduce the human effort of detecting vulnerabilities in large codes by converting source code information into a graph for GNN training. Such approaches convert source codes to intermediate representations, from which Control-Flow Graphs (CFGs) and Abstract Syntax Trees (ASTs) are extracted. Binary graph representations can also be used with GNNs, but at the expense of losing many important features, such as data dependencies and control-flows only available from sources. However, many real-world software attacks exploit a combination of source-level bugs and binary-level implementation details, and are therefore difficult or impossible to detect using source- or binary-level features alone. To overcome this issue, VulGR introduces a novel composite Cross-Domain Code Property Graph (CDCPG) representation that leverages the vulnerability pattern recognition of GNNs by combining these two different domains. Graphs from six different C/C++ applications are accumulated into the VulGr dataset, with each graph labeled vulnerable or non-vulnerable using information drawn from public vulnerability databases. The benchmark performance of popular GNN methods in this domain are then evaluated, with the best performing model yielding an F1-score of 0.855 and Recall of 0.908. </b> </p>
+			<hr>
+		</header>
+		<main>
+			<article id="mainLeft">
+				<section>
+					<h2><b>CONTACT </b></h2>
+					<!-- contact info including social media -->
+                    <p>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:zamanioracle@gmail.com">zamanioracle@gmail.com</a>
+                        <!--<a href="mailto:mahmoud.zamani@utdallas.edu">   Mahmoud.Zamani@UTDallas.edu</a>-->
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:mahmoud.zamani@utdallas.edu">mahmoud.zamani@utdallas.edu</a>
+                        <!--<a href="mailto:mahmoud.zamani@utdallas.edu">   Mahmoud.Zamani@UTDallas.edu</a>-->
+                    </p>
+                    <p>
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <a href="https://github.com/MahmoudZamani"> Mahmoud Zamani</a>
+                    </p>
+				</section>
+                <section>
+					<h2><b> VulGr Architecture </b></h2>
+					<!-- your skills -->
+                    <hr><b></b></hr>
+                    <center><img src="./images/Architecture-NIPS.JPG" alt="centered image" ht="1000" width="1000"></center>
+				</section>
+				<section>
+					<h2> <p style="text-align:justify"> <b> Summary of Existing Vulnerability Detection Datasets</b> </p> </h2>
+					<!-- your skills -->
+                    <hr><b></b></hr>
+                    <center> <img src="./images/Datasets-NIPS.png" height="150"> </center>
+				</section>
+                <section>
+					<h2><b> The Previous Graphs Used in Vulnerability Detection Publication Only Considering Source-Code  </b></h2>
+					<!-- your skills -->
+                    <hr><b></b></hr>
+                    <center> <img src="./images/AST-CFG-PDG.JPG" height="150" wedth=""> </center>
+				</section>
+                <section>
+					<h2><b> Sample Introduced CDCPG Graph Combining Source and Binary-Level Codes </b></h2>
+					<!-- your skills -->
+                    <hr><b></b></hr>
+                    <center> <img src="./images/SampleCDCPG.JPG" height="150" wedth=""> </center>
+				</section>
+                <section>
+					<h2><b> Description of Applications Comprising our VulGr dataset  </b></h2>
+					<!-- your skills -->
+                    <hr><b></b></hr>
+                    <center> <img src="./images/ApplicationsUsedInNIPS.JPG" height="150" wedth=""> </center>
+				</section>
+                <section>
+					<h2><b> Dataset Information </b></h2>
+                    <hr><b></b></hr>
+                    <center> <img src="./images/ExistingDatasets.JPG" height="598" width="398"> </center>
+
+  			    </section>
+                  <section>
+					<h2><b> Dataset Information </b></h2>
+                    <hr><b></b></hr>
+                    <center> <img src="./images/Algorithm-CDCPGGeneration.JPG" height="598" width="398"> </center>
+
+  			    </section>
+                <section>
+					<h2><b> Dataset Information </b></h2>
+                    <hr><b></b></hr>
+                    <center> <img src="./images/ComparitiveAnalysis.JPG" height="598" width="398"> </center>
+
+  			    </section>
+                <section>
+					<h2><b> Dataset Information </b></h2>
+                    <hr><b></b></hr>
+                    <center> <img src="./images/ComparitiveAnalysisApps.JPG" height="598" width="398"> </center>
+
+  			    </section>                
+<!--				<section>
+					<h2><b> Dataset Information </b></h2>
+                    <hr><b></b></hr>
+                    <center> <img src="./images/dataset-info-nips.JPG" height="598" width="398"> </center>
+
+  			    </section>  -->
+				<section>
+					<h2> <b> Dataset Formating and Labeling </b> </h2>
+					<!-- your education -->
+                    <hr style="text-align:justify"> <b> National Vulnerability Database (NVD) and Common Vulnerabilities and Exposures (CVE) information were used to identify vulnerable functions. The generated graph is then converted into a textual format that is compatible with Pytorch Geometric Libraries following a popular TU dataset format (TU Dataset :  A collection of benchmark datasets for learning with graphs, ICML 2020 Workshop on Graph Representation Learning and Beyond) as follows: </b></hr>
+                    <h3></h3>
+                    <b> n   =  total number of nodes </b> 
+                    <h3></h3>   
+                    <b> m  =  total number of edges </b>
+                    <h3></h3>
+                    <b> N= number of graphs </b>
+                    <h3></h3>
+                         <b> 1)	Function_A.txt (m lines):   A sparse adjacency matrix for all graphs, each record corresponds to (row, col) resp. (node_id, node_id) </b>
+                         <h3></h3>
+                         <b> 2)	Function_graph_indicator.txt (n lines):    A column vector of graph identifiers for all nodes of all graphs, the ith record corresponds to graph_id which contains node_id i. </b>
+                         <h3></h3>
+                         <b> 3)	Function_graph_labels.txt (N lines):     The class labels (Vulnerable - 1, Non-Vulnerable - 0) for all graphs in the dataset, the ith record corresponds to the class label of the graph with graph_id i. </b>
+                         <h3></h3>
+                         <b> * For the current work, we didn’t consider node classification. We only categorized the graphs function-wise.  We can use the node classification in the future  </b>
+				</section>
+                <section>
+					<h2><b> Usages </b></h2>
+                    <hr style="text-align:justify"> <b> You can use our dataset with Pytorch Geometric libraries such as DGI (https://www.dgl.ai/), PyG (https://pyg.org/) and even directly with Torch-Geometric Libraries. </b> </hr>
+                </section>
+                <section>
+                    <h2><b> Download </b></h2>
+                    <hr><b></b></hr>
+                    <p> <b> Link:  <a href="https://utdallas.box.com/s/1onexj8emcgorwq5798yu07id1o7m255"> VulGr Dataset </a>.</p>
+                    <p>Please let us know if you need our help to create new datasets for different applications and share your feedbacks to improve the current and future works. </b></p>
+                </section>
+			</article>
+			<article id="mainRight">
+
+                <section>
+					<h2><b> Related Pulications </b></h2>
+					<!-- about you -->
+                    <hr></hr>
+                    <p>
+                        <a href="https://openreview.net/forum?id=rrZtzI7xj2b"> 1.</a></a> <u>Zamani, M.</u>, Irteza, S., et al., Cross Domain Vulnerability Detection Using Graph Contrastive Learning, Accepted in ICLR TinyPaper 2023 </a>
+                    </p>
+                    <p>
+                        <a href="https://www.linkedin.com/in/mahmoud-zamani/"> 2.</a></a> <u>Wickramasuriya, S.</u>, Zamani, M., et al., RANSAQ: Searching Source-Binary Hybrid Code Property Graphs for Vulnerabilities, In final preparation for NDSS 2023  </a>
+                    </p>
+                    <p>
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=i1OZXOAAAAAJ&citation_for_view=i1OZXOAAAAAJ:UeHWp8X0CEIC"> 3.</a></a> Li, X., Khan, L., <u>Zamani, M.</u>, et al., Con2Mix: A Semi-Supervised Method for Imbalanced Tabular Security Data, 2023 IFIP Annual Conference on Data and Applications Security and Privacy </a>
+                    </p>
+                    <p>
+                        <a href="https://www.linkedin.com/in/mahmoud-zamani/"> 4.</a></a> <u>Zamani, M.</u>, Khan, L., Hamlen, K., Robust Vulnerability Detection Systems Using Explainable AI Methods, INFORM 2023</a>
+                    </p>
+                    <p>
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=i1OZXOAAAAAJ&citation_for_view=i1OZXOAAAAAJ:UeHWp8X0CEIC"> 5.</a></a> Li, X., Khan, L., <u>Zamani, M.</u>, et a., MCoM: A Semi-Supervised Method for Imbalanced Tabular Security Data. In: Sural, S., Lu, H. (eds) Data and Applications Security and Privacy XXXVI. DBSec 2022.</a>
+                    </p>
+				</section>
+			</article>
+		</main>
+	</body>
+</html>
